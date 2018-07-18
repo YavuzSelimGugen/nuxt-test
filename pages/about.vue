@@ -1,11 +1,13 @@
 <template lang="html">
   <div class="">
-    <p @click='$router.go(-1)'>{{title}}</p>
+    <p class="red">{{title}}</p>
+    <button  @click='$router.go(-1)'>Go back!</button>
   </div>
 </template>
 
 <script>
 export default {
+  layout: 'custom-layout',
   name: 'about',
   data () {
     return {
@@ -16,4 +18,7 @@ export default {
 </script>
 
 <style lang="css">
+.red {
+  color: red;
+}
 </style>
