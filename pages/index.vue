@@ -10,10 +10,14 @@
       </h2>
       <div class="">
         <nuxt-link to="/about">About page</nuxt-link>
-        <br>
+      <br/>
+
         <nuxt-link to="/user/10">User ID</nuxt-link>
         <!-- <p @click='$router.go('/user/_id')'>User/id</p> -->
         <!-- <button @click='$router.go('/user/_id')'></button> -->
+        <div v-for="(user) in visatypes" :key="user.ID" class="">
+          <nuxt-link :to="'/user/'+user.ID">{{ user.name }}</nuxt-link>
+        </div>
       </div>
     </div>
   </section>
@@ -25,6 +29,25 @@ import AppLogo from '~/components/AppLogo.vue'
 export default {
   components: {
     AppLogo
+  },
+  name: 'index',
+  data () {
+    return {
+      visatypes: []
+    }
+  },
+  beforeMount () {
+    this.loadData()
+  },
+  methods: {
+    loadData () {
+        this.visatypes = [{name : 'Yavuz', ID: 1}]
+        this.visatypes.push({name : 'Yavuz2', ID: 2})
+        this.visatypes.push({name : 'Yavuz3', ID: 3})
+        // this.visatypes += {name : 'Yavuz2', ID: 2}
+        // this.visatypes += {name : 'Yavuz3', ID: 3}
+        console.log(this.visatypes)
+    }
   }
 }
 </script>
