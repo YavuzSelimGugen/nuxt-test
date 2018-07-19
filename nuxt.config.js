@@ -24,6 +24,7 @@ module.exports = {
     /*
     ** Run ESLint on save
     */
+    vendor: ['vue-notifications']
     extend (config, { isDev, isClient }) {
       if (isDev && isClient) {
         config.module.rules.push({
@@ -34,5 +35,6 @@ module.exports = {
         })
       }
     }
-  }
+  },
+  plugins: ['~/plugins/vue-notifications']
 }
