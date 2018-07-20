@@ -9,6 +9,8 @@
         Nuxt.js project
       </h2>
       <div class="links">
+        <nuxt-link to="/list">List page</nuxt-link>
+        <br>
         <nuxt-link to="/about">About page</nuxt-link>
         <br>
         <nuxt-link to="/user/10">User ID</nuxt-link>

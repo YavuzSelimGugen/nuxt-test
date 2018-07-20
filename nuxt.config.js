@@ -34,7 +34,7 @@ module.exports = {
         })
       }
     },
-    vendor: ['vue-notifications']
+    vendor: ['vue-notifications', 'axios']
   },
   plugins: ['~/plugins/vue-notifications']
 }
