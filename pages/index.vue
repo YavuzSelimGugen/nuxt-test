@@ -17,7 +17,7 @@
         <div v-for="(user) in visatypes" :key="user.ID" class="">
           <nuxt-link :to="'/user/'+user.ID">{{ user.name }}</nuxt-link>
         </div>
-          <button @click="eventa">sss</button>
+          <button @click="eventa">This button writes something on console!</button>
       </div>
     </div>
   </section>

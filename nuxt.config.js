@@ -20,6 +20,12 @@ module.exports = {
   /*
   ** Build configuration
   */
+  router: {
+    middleware: 'i18n'
+  },
+  generate: {
+    routes: ['/', '/about', '/tr', '/tr/about']
+  },
   build: {
     /*
     ** Run ESLint on save
@@ -34,7 +40,8 @@ module.exports = {
         })
       }
     },
-    vendor: ['vue-notifications', 'axios']
+    vendor: ['vue-notifications', 'axios', 'vue-i18n']
   },
-  plugins: ['~/plugins/vue-notifications']
+  // ssr attr. makes plugin work only for the browser
+  plugins: [{src: '~/plugins/vue-notifications', ssr: false}, '~/plugins/i18n.js']
 }

@@ -1,6 +1,7 @@
 <template lang="html">
   <div class="">
     <!-- {{title}} -->
+    <button  @click='$router.go(-1)'>Go back!</button>
     <div v-for="i in title" :key="i.id" class="center">
       {{i.name}}
     </div>
